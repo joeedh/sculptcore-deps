@@ -1,0 +1,17 @@
+# AMD, Copyright (c) 1996-2023, Timothy A. Davis.
+# All Rights Reserved.
+# SPDX-License-Identifier: BSD-3-Clause
+
+prefix=C:/dev/webgl-app-framework-quad-remeshing/sculptcore/extern/sculptcore-deps/windows/clang-20-x64/relwithdebinfo/suitesparse
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include/suitesparse
+
+Name: AMD
+URL: https://github.com/DrTimothyAldenDavis/SuiteSparse
+Description: Routines for permuting sparse matrices prior to factorization in SuiteSparse
+Version: 3.3.4
+Requires.private: SuiteSparse_config
+Libs: -L${libdir} -lamd_static
+Libs.private: 
+Cflags: -I${includedir}

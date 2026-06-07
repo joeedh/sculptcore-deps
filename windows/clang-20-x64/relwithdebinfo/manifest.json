@@ -1,0 +1,8 @@
+{
+  "openblas": "v0.3.33",
+  "suitesparse": "v7.12.2",
+  "platform": "windows",
+  "toolchain": "clang-20-x64",
+  "config": "relwithdebinfo",
+  "cmakeBuildType": "RelWithDebInfo"
+}
