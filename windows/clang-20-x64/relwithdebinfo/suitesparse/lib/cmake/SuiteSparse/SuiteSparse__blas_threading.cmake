@@ -113,14 +113,15 @@ if ( ${BLA_VENDOR} STREQUAL "OpenBLAS" )
         ${ABS_SOURCE_PATH}
         LINK_OPTIONS    ${BLAS_LINKER_FLAGS}
         LINK_LIBRARIES  ${BLAS_LIBRARIES}
-        RUN_OUTPUT_VARIABLE OPENBLAS_2015_OUTPUT )
+        RUN_OUTPUT_VARIABLE OPENBLAS_2015_OUTPUT 
+        COMPILE_OUTPUT_VARIABLE OPENBLAS_2015_COMPILE_OUTPUT )
     if ( ${OPENBLAS_2015_COMPILES} )
         if ( ${OPENBLAS_2015_RUNS} STREQUAL "FAILED_TO_RUN" )
             # OpenBLAS compiled but failed to run ... why?
-            message ( FATAL_ERROR "BLAS: OpenBLAS failed to run (v0.2.14 or later is required)" )
+            message ( FATAL_ERROR "${OPENBLAS_2015_OUTPUT}: BLAS: OpenBLAS failed to run (v0.2.14 or later is required)" )
         endif ( ) 
     else ( )
-        message ( FATAL_ERROR "BLAS: OpenBLAS failed to compile (v0.2.14 or later is required)" )
+        message ( FATAL_ERROR "${OPENBLAS_2015_COMPILE_OUTPUT}: BLAS: OpenBLAS failed to compile (v0.2.14 or later is required)" )
     endif ( )
 
     # check if OpenBLAS has openblas_set_num_threads_local (Apr 2024 or later)
