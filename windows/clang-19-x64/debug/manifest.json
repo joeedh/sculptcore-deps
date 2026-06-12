@@ -1,0 +1,8 @@
+{
+  "openblas": "v0.3.33",
+  "suitesparse": "v7.12.2",
+  "platform": "windows",
+  "toolchain": "clang-19-x64",
+  "config": "debug",
+  "cmakeBuildType": "Debug"
+}

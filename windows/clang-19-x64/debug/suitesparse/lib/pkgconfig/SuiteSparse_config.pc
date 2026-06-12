@@ -1,0 +1,16 @@
+# SuiteSparse_config, Copyright (c) 2012-2023, Timothy A. Davis.
+# All Rights Reserved.
+# SPDX-License-Identifier: BSD-3-clause
+
+prefix=C:/dev/webgl-app-framework-quad-remeshing/sculptcore/extern/sculptcore-deps/windows/clang-19-x64/debug/suitesparse
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include/suitesparse
+
+Name: SuiteSparseConfig
+URL: https://github.com/DrTimothyAldenDavis/SuiteSparse
+Description: Configuration for SuiteSparse
+Version: 7.12.2
+Libs: -L${libdir} -lsuitesparseconfig_static
+Libs.private:  -lomp
+Cflags: -I${includedir}
