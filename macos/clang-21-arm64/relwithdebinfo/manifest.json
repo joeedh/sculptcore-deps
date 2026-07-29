@@ -1,0 +1,9 @@
+{
+  "openblas": "v0.3.33",
+  "suitesparse": "v7.12.2",
+  "revision": 2,
+  "platform": "macos",
+  "toolchain": "clang-21-arm64",
+  "config": "relwithdebinfo",
+  "cmakeBuildType": "RelWithDebInfo"
+}
