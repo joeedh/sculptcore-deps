@@ -1,0 +1,13 @@
+libdir=/home/runner/work/sculptcore-blender-addon/sculptcore-blender-addon/engine/extern/sculptcore-deps/linux/clang-18-x64/relwithdebinfo/openblas/lib
+libnameprefix=
+libnamesuffix=
+libsuffix=
+includedir=/home/runner/work/sculptcore-blender-addon/sculptcore-blender-addon/engine/extern/sculptcore-deps/linux/clang-18-x64/relwithdebinfo/openblas/include/openblas
+
+openblas_config=USE_64BITINT= NO_CBLAS=1 NO_LAPACK= NO_LAPACKE= DYNAMIC_ARCH=ON DYNAMIC_OLDER=OFF NO_AFFINITY=ON USE_OPENMP=ON ZEN MAX_THREADS=16 
+Name: OpenBLAS
+Description: OpenBLAS is an optimized BLAS library based on GotoBLAS2 1.13 BSD version
+Version: 0.3.33
+URL: https://github.com/OpenMathLib/OpenBLAS
+Libs: -L${libdir} -l${libnameprefix}openblas${libnamesuffix}${libsuffix} 
+Cflags: -I${includedir} -fopenmp=libomp 
